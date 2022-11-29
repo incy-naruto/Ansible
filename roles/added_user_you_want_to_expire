@@ -1,0 +1,6 @@
+- name: Added a consultant whose account you want to expire
+  ansible.builtin.user:
+    name: james18
+    shell: /bin/zsh
+    groups: developers
+    expires: 1422403387

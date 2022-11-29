@@ -1,0 +1,4 @@
+- name: Starting at Ansible 2.6, modify user, remove expiry time
+  ansible.builtin.user:
+    name: james18
+    expires: -1

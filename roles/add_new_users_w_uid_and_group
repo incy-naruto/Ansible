@@ -1,0 +1,9 @@
+- name: Add new users with specific uid and primary group
+  host: all
+  become: yes
+  tags: 
+  ansible.builtin.user:
+      name:  ansible
+      shell: /bin/bash
+      group: admin
+      uid: 1040
