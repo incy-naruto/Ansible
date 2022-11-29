@@ -4,16 +4,9 @@
   become: yes
   tags: 
   roles:
+  # Add new users with specific uid and primary group
     - add_new_users_w__uid_and_group
-
-- name: Create a 2048-bit SSH key for user jsmith in ~jsmith/.ssh/id_rsa
-  ansible.builtin.user:
-    name: ansible
-    generate_ssh_key: yes
-    ssh_key_bits: 2048
-    ssh_key_file: .ssh/id_rsa
-
-- name: Starting at Ansible 2.6, modify user, remove expiry time
-  ansible.builtin.user:
-    name: ansible
-    expires: -1
+  # Create a 2048-bit SSH key for user in ~user/.ssh/id_rsa
+    - create_2048_bit_SSH_key_for_use
+  # Modify user, remove expiry time
+    - modify_user_remove_expiry_time

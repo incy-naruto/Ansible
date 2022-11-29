@@ -1,4 +1,4 @@
-- name: Create a 2048-bit SSH key for user jsmith in ~jsmith/.ssh/id_rsa
+- name: Create a 2048-bit SSH key for user in ~user/.ssh/id_rsa
   ansible.builtin.user:
     name: ansible
     generate_ssh_key: yes
